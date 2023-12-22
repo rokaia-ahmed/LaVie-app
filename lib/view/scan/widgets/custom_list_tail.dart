@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomListTail extends StatelessWidget {
    CustomListTail({this.text,this.subtext,this.image,Key? key}) : super(key: key);
-  String? text;
-  String? subtext;
-  String? image;
+ final String? text;
+ final String? subtext;
+ final String? image;
   @override
   Widget build(BuildContext context) {
     return ListTile(

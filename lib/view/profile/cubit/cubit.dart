@@ -1,12 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:plants_app/core/network/dio_helper.dart';
+import 'package:plants_app/core/network/end_point.dart';
 import 'package:plants_app/models/current_user_model.dart';
 import 'package:plants_app/models/update_user_model.dart';
-import 'package:plants_app/network/dio_helper.dart';
 import 'package:plants_app/view/profile/cubit/state.dart';
-
 import '../../../core/utils/constant.dart';
-import '../../../network/end_point.dart';
 
 class ProfileCubit extends Cubit<ProfileStates>{
   ProfileCubit() : super(InitProfileState());

@@ -1,17 +1,13 @@
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'package:plants_app/core/network/cash_helper.dart';
 import 'package:plants_app/view/forums/screens/forums_screen.dart';
 import 'package:plants_app/view/home/screens/home_screen.dart';
 import 'package:plants_app/view/layout/cubit/states.dart';
 import 'package:plants_app/view/notification/screens/notification_screen.dart';
 import 'package:plants_app/view/profile/screens/profile_screen.dart';
 import '../../../core/utils/app_strings.dart';
-import '../../../network/cash_helper.dart';
-import '../../scan/screens/scan_details.dart';
 import '../../scan/screens/scan_screen.dart';
 
 class LayoutCubit extends Cubit<LayoutStates>{
@@ -40,7 +36,9 @@ class LayoutCubit extends Cubit<LayoutStates>{
 
   Locale get language =>
       loadLanguageFromBox() ? const Locale('en') : const Locale('ar');
+  
   Locale? languageGroupValue;
+
   void selectLanguage(newValue, context) {
     languageGroupValue = newValue;
     print(newValue);
@@ -60,4 +58,5 @@ class LayoutCubit extends Cubit<LayoutStates>{
           () => Phoenix.rebirth(context),
     );
   }
+
 }

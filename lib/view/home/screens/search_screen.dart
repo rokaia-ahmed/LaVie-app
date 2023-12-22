@@ -11,7 +11,7 @@ import '../../../models/products_model.dart';
 
 class SearchScreen extends StatelessWidget {
    SearchScreen({Key? key}) : super(key: key);
-  TextEditingController textController =TextEditingController();
+ final TextEditingController textController =TextEditingController();
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<HomeCubit, HomeStates>(
@@ -71,8 +71,8 @@ class SearchScreen extends StatelessWidget {
 }
 class BuildItem extends StatelessWidget {
   BuildItem(this.model,{Key? key,this.cubit}) : super(key: key);
-  ProductModel? model;
-  HomeCubit? cubit;
+ final ProductModel? model;
+ final HomeCubit? cubit;
   @override
   Widget build(BuildContext context) {
     return Stack(

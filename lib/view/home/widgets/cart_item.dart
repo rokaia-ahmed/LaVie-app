@@ -1,6 +1,4 @@
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:plants_app/core/utils/app_colors.dart';
 import 'package:plants_app/core/utils/constant.dart';

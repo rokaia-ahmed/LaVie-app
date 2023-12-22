@@ -14,7 +14,7 @@ import '../../../core/widgets/search_empty.dart';
 
 class SearchScreen extends StatelessWidget {
    SearchScreen({Key? key}) : super(key: key);
-  TextEditingController? textController =TextEditingController();
+ final TextEditingController? textController =TextEditingController();
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ForumsCubit, ForumsStates>(
@@ -75,7 +75,7 @@ class SearchScreen extends StatelessWidget {
 
 class BuildItem extends StatelessWidget {
    BuildItem(this.data,{Key? key}) : super(key: key);
- DataPosts? data;
+final DataPosts? data;
   @override
   Widget build(BuildContext context) {
     return Column(

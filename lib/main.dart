@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:plants_app/l10n/l10n.dart';
+import 'package:plants_app/core/network/cash_helper.dart';
+import 'package:plants_app/core/network/dio_helper.dart';
 import 'package:plants_app/view/forums/cubit/cubit.dart';
 import 'package:plants_app/view/home/cubit/cubit.dart';
 import 'package:plants_app/view/layout/cubit/cubit.dart';
@@ -11,10 +12,7 @@ import 'package:plants_app/view/scan/cubit/cubit.dart';
 import 'package:plants_app/view/splash/splash_screen.dart';
 import 'core/utils/app_strings.dart';
 import 'core/utils/constant.dart';
-import 'network/cash_helper.dart';
-import 'network/dio_helper.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -65,16 +63,11 @@ class MyApp extends StatelessWidget {
         },
         builder: (context, state) {
           return MaterialApp(
-           // locale:LayoutCubit.get(context).language,
-            /*supportedLocales: L10n.all,
-            localizationsDelegates:const [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate
-            ],*/
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              useMaterial3: false,
+            ),
             home: startWidget,
           );
         },

@@ -1,8 +1,6 @@
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:plants_app/core/network/cash_helper.dart';
 import 'package:plants_app/core/utils/media_quary.dart';
 import 'package:plants_app/core/components/component.dart';
 import 'package:plants_app/core/widgets/custom_button.dart';
@@ -11,7 +9,6 @@ import 'package:plants_app/view/layout/layout.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/constant.dart';
 import '../../../core/widgets/custom_text_form_field.dart';
-import '../../../network/cash_helper.dart';
 import 'cubit/cubit.dart';
 import 'cubit/state.dart';
 

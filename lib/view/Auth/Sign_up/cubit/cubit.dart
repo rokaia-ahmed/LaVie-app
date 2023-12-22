@@ -1,10 +1,9 @@
-import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:plants_app/core/network/dio_helper.dart';
+import 'package:plants_app/core/network/end_point.dart';
 import 'package:plants_app/models/signup_model.dart';
-import 'package:plants_app/network/dio_helper.dart';
 import 'package:plants_app/view/Auth/Sign_up/cubit/states.dart';
-import '../../../../network/end_point.dart';
 
 class SignupCubit extends Cubit<SignupStates> {
   SignupCubit() :  super(InitSignupState());

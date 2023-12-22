@@ -5,16 +5,14 @@ import 'package:intl/intl.dart';
 import 'package:plants_app/core/utils/app_colors.dart';
 import 'package:plants_app/view/forums/cubit/cubit.dart';
 import 'package:plants_app/view/forums/cubit/states.dart';
-
 import '../../../models/details_post_model.dart';
 
 
 
 class CommentScreen extends StatelessWidget {
-  CommentScreen({Key? key, required this.idForum })
-      : super(key: key);
-  TextEditingController commentController = TextEditingController();
-  String? idForum;
+  CommentScreen({Key? key, required this.idForum }) : super(key: key);
+final  TextEditingController commentController = TextEditingController();
+ final String? idForum;
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +90,7 @@ class CommentScreen extends StatelessWidget {
 
 class ItemBuilder extends StatelessWidget {
   ItemBuilder({Key? key, required this.data }) : super(key: key);
-  ForumComment data;
+ final ForumComment data;
 
   @override
   Widget build(BuildContext context) {
